@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIY Fashion Design</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body{
       font-family: Arial, sans-serif;
       background-color: #f9f7fa;
@@ -17,20 +21,24 @@
       background-color: #f4b6c2;
       color: white;
       text-align: center;
-      padding: 20px 0;
+      padding: 25px 0;
     }
 
     nav{
       background-color: #ffe6eb;
       text-align: center;
-      padding: 10px;
+      padding: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a{
       text-decoration: none;
       color: #333;
-      margin: 0 10px;
+      margin: 0 15px;
       font-weight: bold;
+      transition: color 0.2s;
     }
 
     nav a:hover{
@@ -78,11 +86,18 @@
       border-radius: 8px;
       object-fit: cover;
       border: 2px solid #f4b6c2;
-      transition: 0.2s;
+      transition: transform 0.2s;
     }
 
     .gallery img:hover{
       transform: scale(1.05);
+    }
+
+    video{
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      border: 2px solid #c45a78;
     }
 
     footer{
@@ -92,25 +107,51 @@
       margin-top: 30px;
       font-size: 14px;
     }
+
+    .contact{
+      text-align: center;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .contact a{
+      color: #c45a78;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover{
+      text-decoration: underline;
+    }
+ #tutorials video{
+  height: 50vh;
+  width: 100%;
+ }
+    
   </style>
 </head>
 <body>
 
-  <header>
+  <header id="home">
     <h1>DIY Fashion Design</h1>
     <p>Create, Reuse, and Redefine Your Style</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Tips</a>
-    <a href="#">Tutorials</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#tips">Tips</a>
+    <a href="#tutorials">Tutorials</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
-    <section>
+    <section id="about">
       <h2>About DIY Fashion</h2>
       <p>
         DIY fashion is about expressing your creativity through clothing and accessories. 
@@ -119,7 +160,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="tips">
       <h2>Quick DIY Ideas</h2>
       <ul>
         <li>Paint your old T-shirts with fabric colors or markers.</li>
@@ -129,7 +170,16 @@
       </ul>
     </section>
 
-    <section>
+    <section id="tutorials">
+      <h2>DIY Video Tutorial</h2>
+      <video controls>
+        <source src="Sneakers DIY.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Watch how I transformed my old sneakers into a cool streetwear look!</p>
+    </section>
+
+    <section id="gallery">
       <h2>DIY Gallery</h2>
       <div class="gallery">
         <img src="https://www.iconicindia.com/cdn/shop/articles/Screenshot_2023-12-04_111044.png?v=1701668501" alt="DIY Fashion 1">
@@ -142,13 +192,10 @@
     </section>
   </div>
 
-    
-  
-  <section>
-  <h2>Contact Me</h2>
-  <p>Email: hraj96462@gmail.com</p>
-</section>
-
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:hraj96462@gmail.com">hraj96462@gmail.com</a></p>
+  </section>
 
   <footer>
     <p>Created by Harsh Raj | DIY Fashion Design Project | © 2025</p>
@@ -156,4 +203,3 @@
 
 </body>
 </html>
-
